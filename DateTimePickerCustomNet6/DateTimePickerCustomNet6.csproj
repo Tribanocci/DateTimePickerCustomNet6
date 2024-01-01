@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Date and Time Picker Widget for .NET 6</Title>
+    <Authors>Konstantinos Fytilis</Authors>
+    <Description>A LibraryClass for a C# WPF application project, in .NET 6.0. The library implements a DateTiemPicker, which besides the date picking has along side a time picking widgets. Extented documenetations and comments for easy modifications and styling. Appropriate for a dropdown or popup widget for returning a DateTiem value to a textbox, or for a stand-alone calander widget.</Description>
+    <Copyright>Copyright 2023</Copyright>
+  </PropertyGroup>
+
+</Project>
