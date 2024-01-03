@@ -43,7 +43,7 @@ Extented documenetations and comments for easy modifications and styling. Approp
 1. Clone Github repository and add the LibraryClass to your solution.
 2. This is how the solution tree in the solution explorer should look like, if you add a test WPF application.
 
-![Image 2:if not available see github repo](docs\SolutionTree.png)
+![Image 2:if not available see github repo](docs/SolutionTree.png)
 
 3. Right-Click on the WPF application Project in the solution explorer and Add -> Project Reference 
 4. Importing the LbraryClass to the WPF aaplication using the lines with the gray arrow.
