@@ -1,7 +1,7 @@
 # DateTimePickerCustom
 
 This projects contains a LibraryClass for a C# WPF application project. The library implements a DateTiemPicker, which besides the date picking has along side a time picking widgets.  
-Extented documenetations and comments for easy modifications and styling. Appropriate for a dropdown or popup widget for returning a DateTiem value to a textbox, or for a stand-alone calander widget.
+Extented documenetations and comments for easy modifications and styling. Appropriate for a dropdown or popup widget for returning a DateTime value to a textbox, or for a stand-alone calander widget.
 
 ## Table of Contents
 
@@ -22,9 +22,10 @@ Extented documenetations and comments for easy modifications and styling. Approp
 3. A time picker will be added soon.
 4. The project solution has a WPF application connected to the library for testing the LibraryClass.
 
-![Overview](docs\DatePicker.png)
+![Image 1:if not available see github repo](docs\DatePicker.png)
 
-**The DatePicker widget (the TimePicker will be added to the next update).**
+**In this Update the TimePicker is available**
+**In next update the Ok button will send DateTime info to a textblock**
 
 
 ## Installation
@@ -42,12 +43,12 @@ Extented documenetations and comments for easy modifications and styling. Approp
 1. Clone Github repository and add the LibraryClass to your solution.
 2. This is how the solution tree in the solution explorer should look like, if you add a test WPF application.
 
-![solut tree](docs\SolutionTree.png)
+![Image 2:if not available see github repo](docs\SolutionTree.png)
 
 3. Right-Click on the WPF application Project in the solution explorer and Add -> Project Reference 
 4. Importing the LbraryClass to the WPF aaplication using the lines with the gray arrow.
 
-![Test](docs\Test.png)
+![Image 3:if not available see github repo](docs\Test.png)
 
 
 ## Usage
