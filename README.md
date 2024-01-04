@@ -25,10 +25,11 @@ Extented documenetations and comments for easy modifications and styling. Approp
 3. A time picker will be added soon.
 4. The project solution has a WPF application connected to the library for testing the LibraryClass.
 
-![Image 1:if not available see github repo](docs/DatePicker.png)
+![Image 1:if not available see github repo](docs/DateTimePicker.png)
 
-**In this Update the TimePicker is available**
-**In next update the Ok button will send DateTime info to a textblock**
+**In this Update the TimePicker is available.**
+
+**In next update the Ok button will send DateTime info to a textblock.**
 
 
 ## Installation
@@ -51,7 +52,7 @@ Extented documenetations and comments for easy modifications and styling. Approp
 3. Right-Click on the WPF application Project in the solution explorer and Add -> Project Reference 
 4. Importing the LbraryClass to the WPF aaplication using the lines with the gray arrow.
 
-![Image 3:if not available see github repo](docs/Test.png)
+![Image 3:if not available see github repo](docs/Test_DateTime.png)
 
 
 ## Usage
