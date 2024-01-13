@@ -1,3 +1,6 @@
+![Nuget](https://img.shields.io/nuget/v/DateTimePickerCustomNet6)
+![Nuget](https://img.shields.io/nuget/dt/DateTimePickerCustomNet6)
+
 # DateTimePickerCustom
 
 This projects contains a LibraryClass for a C# WPF application project. The library implements a DateTiemPicker, which besides the date picking has along side a time picking widgets.  
@@ -44,12 +47,12 @@ Extented documenetations and comments for easy modifications and styling. Approp
 1. Clone Github repository and add the LibraryClass to your solution.
 2. This is how the solution tree in the solution explorer should look like, if you add a test WPF application.
 
-![Image 2:if not available see github repo](docs\SolutionTree.png)
+![Image 2:if not available see github repo](docs/SolutionTree.png)
 
 3. Right-Click on the WPF application Project in the solution explorer and Add -> Project Reference 
 4. Importing the LbraryClass to the WPF aaplication using the lines with the gray arrow.
 
-![Image 3:if not available see github repo](docs\Test_DateTime.png)
+![Image 3:if not available see github repo](docs/Test_DateTime.png)
 
 
 ## Usage
@@ -57,15 +60,15 @@ Extented documenetations and comments for easy modifications and styling. Approp
 Besides a stand-alone calander, its a great and stylized solution for a Date and Time Picker as a **Popup** for a TextBlock Date and time selection.
 
 
-![Image 4:if not available see github repo](docs\PopupTest.png)
+![Image 4:if not available see github repo](docs/PopupTest.png)
 
 **Here is how to include the Popup element in your project (after installing the package).**
 
-![Image 5:if not available see github repo](docs\Popup.png)
+![Image 5:if not available see github repo](docs/Popup.png)
 
 **Here is how to use the values of the Popup (also storde in the Popup TextBlock), in your project.**
 
-![Image 6:if not available see github repo](docs\StaticVar.png)
+![Image 6:if not available see github repo](docs/StaticVar.png)
 
 ## Contributing
 
