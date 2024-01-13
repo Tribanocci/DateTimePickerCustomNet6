@@ -17,15 +17,16 @@ Extented documenetations and comments for easy modifications and styling. Approp
 
 ## Features
 
-1. LibraryClass for a DatePicker. All the logic is located in teh code behind, which is heavily commneted for easy understanding and modification.
+1. LibraryClass for a DateTimePicker. All the logic is located in the code behind, which is heavily commented for easy understanding and modification.
 2. Therefore, the .xaml file is clean and contains only the styles (which will be moved in a different file in the next update) and the grid layout.
-3. A time picker will be added soon.
+3. The DatePicker, TimePicker and PopupWidget are independent components.
 4. The project solution has a WPF application connected to the library for testing the LibraryClass.
 
-![Image 1:if not available see github repo](docs\DatePicker.png)
+![Image 1:if not available see github repo](docs\DateTimePicker.png)
 
-**In this Update the TimePicker is available**
-**In next update the Ok button will send DateTime info to a textblock**
+**In this Update the Popup widget is intergrated as an indepented feature, so you can inlude the popup only with a single tag. See [Usage](#usage) for explaining the Popup functionality**
+
+**In this update the OK button will send DateTime info to the Textblock of the Popup. The static variables, *ResultDate* and *ResultTime* can be used for reading-only the TextBlock DateTime data anywhere in your classes. See [Usage](#usage) for an example.**
 
 
 ## Installation
@@ -48,13 +49,23 @@ Extented documenetations and comments for easy modifications and styling. Approp
 3. Right-Click on the WPF application Project in the solution explorer and Add -> Project Reference 
 4. Importing the LbraryClass to the WPF aaplication using the lines with the gray arrow.
 
-![Image 3:if not available see github repo](docs\Test.png)
+![Image 3:if not available see github repo](docs\Test_DateTime.png)
 
 
 ## Usage
 
 Besides a stand-alone calander, its a great and stylized solution for a Date and Time Picker as a **Popup** for a TextBlock Date and time selection.
 
+
+![Image 4:if not available see github repo](docs\PopupTest.png)
+
+**Here is how to include the Popup element in your project (after installing the package).**
+
+![Image 5:if not available see github repo](docs\Popup.png)
+
+**Here is how to use the values of the Popup (also storde in the Popup TextBlock), in your project.**
+
+![Image 6:if not available see github repo](docs\StaticVar.png)
 
 ## Contributing
 

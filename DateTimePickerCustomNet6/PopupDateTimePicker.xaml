@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="DateTimePickerCustomNet6.PopupDateTimePicker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DateTimePickerCustomNet6"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
+    <Border BorderBrush="Black" BorderThickness="0.5" Margin="5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock x:Name="resultDate"  Grid.Column="0" FontSize="18" FontWeight="Bold" FontStyle="Normal" HorizontalAlignment="Right" VerticalAlignment="Center" 
+                Text="{Binding ResultMonthAndYear, StringFormat='dd/MM/yyyy, '}"/>
+            <TextBlock x:Name="resultTime"  Grid.Column="1" FontSize="18" FontWeight="Bold" FontStyle="Normal" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                        Text="{Binding ResultTime, StringFormat='hh:mm:ss tt '}"/>
+            <ToggleButton x:Name="ToggleButtonControl" Content="▼" Checked="ToggleButtonControl_Checked" Unchecked="ToggleButtonControl_Unchecked" Grid.Column="2"
+                   BorderBrush="Transparent"/>
+
+            <!-- Popup for displaying additional content -->
+            <Popup x:Name="DateTimePickerPopup" PlacementTarget="{Binding ElementName=ToggleButtonControl}" StaysOpen="False" Height="400" Width="600"  Placement="Bottom" HorizontalOffset="-500" >
+                <Grid Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <local:DatePickerWidget Grid.Column="0"/>
+                        <local:TimePickerWidget Grid.Column="1"/>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="   OK   " Background="Transparent" BorderBrush="Transparent"  Margin="10,0,0,0"
+                                Click="OK_click"/>
+                        <Button Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Cancel" Background="Transparent" BorderBrush="Transparent"  Margin="0,0,10,0"
+                                Click="Cancel_click"/>
+                    </Grid>
+
+                </Grid>
+
+            </Popup>
+        </Grid>
+    </Border>
+   
+</UserControl>

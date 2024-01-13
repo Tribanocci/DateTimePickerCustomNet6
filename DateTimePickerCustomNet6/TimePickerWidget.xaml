@@ -4,19 +4,20 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              
-             xmlns:local="clr-namespace:DateTimePickerCustomNet6"
+             xmlns:local="clr-namespace:DateTimePickerCustomNet6" d:DataContext="{d:DesignInstance Type=local:TimePickerWidget}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <local:TimeOnlyConverter x:Key="TimeOnlyConverter" />  <!-- For converting the text of the textBox (time selecting) to Time only of the TextBlock in the header-->
     </UserControl.Resources>
-
-    <Grid  x:Name="MainGrid">
+    
+    
+    <Grid  x:Name="MainGrid" >
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="4*"/>
-            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
 
@@ -54,7 +55,7 @@
         </Grid>
         
         <!-- Hour hand -->
-        <Grid x:Name="HourGrid" Grid.Row="2" HorizontalAlignment="Stretch">
+        <Grid x:Name="HourGrid" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <Grid.Background>
                 <ImageBrush ImageSource="images/Clock-Face.png" Stretch="Uniform" AlignmentY="Center"/>
             </Grid.Background>
@@ -65,9 +66,9 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="2" Margin="0">
+            <Grid Grid.Row="2" >
                 <Line x:Name="hourHand" X1="0" Y1="0" X2="0" Y2="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}},Path=ActualWidth}" 
-                  Stroke="Black" StrokeThickness="6" HorizontalAlignment="Center" VerticalAlignment="Top">
+                  Stroke="Black" StrokeThickness="6" HorizontalAlignment="Center" >
                     <Line.RenderTransform>
                         <RotateTransform Angle="{Binding CurrentHourAngle}"></RotateTransform>
                     </Line.RenderTransform>
@@ -76,7 +77,7 @@
         </Grid>
 
         <!-- Minute hand -->
-        <Grid x:Name="MinuteSecondGrid" Grid.Row="2" HorizontalAlignment="Stretch">
+        <Grid x:Name="MinuteSecondGrid" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <Grid.Margin>
                 <Thickness Left="10" Top="20" Right="10" Bottom="20"/>
             </Grid.Margin>
@@ -86,7 +87,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="1">
-                <Line x:Name="minuteHand" X1="0" Y1="0" X2="0" Y2="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}},Path=ActualWidth}" Stroke="Black" StrokeThickness="4" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                <Line x:Name="minuteHand" X1="0" Y1="0" X2="0" Y2="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}},Path=ActualWidth}" Stroke="Black" StrokeThickness="4" HorizontalAlignment="Center" >
                     <Line.RenderTransform>
                         <RotateTransform Angle="{Binding CurrentMinutesAngle}"></RotateTransform>
                     </Line.RenderTransform>

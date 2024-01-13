@@ -46,6 +46,7 @@ namespace DateTimePickerCustomNet6
                 if (_activeTime != value)
                 {
                     _activeTime = value;
+                    SetResultTime(value); // Use this to pass the ActiveDate of the calander to other classes (like a textBlock that uses the Widget as a Popup
                     OnPropertyChanged(nameof(ActiveTime));// INotifyPropertyChanged, the string of the selectedDate (from changing month buttons)
                     AngleSet();
                 }
@@ -66,6 +67,14 @@ namespace DateTimePickerCustomNet6
                 }
             }
         }
+
+        private static TimeOnly _resultTime; // Static for passing the ActiveDate to other Classes without instance reference
+        public static TimeOnly ResultTime
+        {
+            get { return _resultTime; } //Only read from other Classes
+        }
+        public static void SetResultTime(TimeOnly value) { _resultTime = value; } // Set only from this class
+        //=============================================================================================================
 
         private double _currentHourAngle;  // Property for calculating the angle of the hour hand
         public double CurrentHourAngle

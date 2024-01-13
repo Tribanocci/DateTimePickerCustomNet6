@@ -15,7 +15,7 @@ namespace DateTimePickerCustomNet6
     {
         //==================================    PROPERTIES  ===================================================================================================
         private DateTime _selectedMonthAndYear = DateTime.Now;  // Property to hold the selected month and year (second row)
-        public DateTime SelectedMonthAndYear
+        public  DateTime SelectedMonthAndYear
         {
             get { return _selectedMonthAndYear; }
             set
@@ -38,10 +38,19 @@ namespace DateTimePickerCustomNet6
                 if (_activeDate != value)
                 {
                     _activeDate = value;
+                    SetResultDate(value); // Use this to pass the ActiveDate of the calander to other classes (like a textBlock that uses the Widget as a Popup
                     OnPropertyChanged(nameof(ActiveDate));// INotifyPropertyChanged, the string of the ActiveDAte (from pressing a calander button)
                 }
             }
         }
+
+        private static DateTime _resultDate; // Static for passing the ActiveDate to other Classes without instance reference
+        public static DateTime ResultDate
+        {
+            get { return _resultDate; } //Only read from other Classes
+        }
+        public static void SetResultDate(DateTime value) { _resultDate = value; } // Set only from this class
+
         private Button _previousDateClickedButton = new Button(); //Store the previous date that was clicked, so the button can reset its style
         public ObservableCollection<int> CalanderDataList { get; set; } = new ObservableCollection<int>(); // Property to hold the calendar days of the month,the observableCollection will notify when modified
 

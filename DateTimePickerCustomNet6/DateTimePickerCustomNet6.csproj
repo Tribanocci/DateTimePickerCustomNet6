@@ -15,9 +15,10 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/Tribanocci/DateTimePickerCustomNet6</RepositoryUrl>
     <PackageTags>Date;Time;Picker;Widget;Custom;.NET;</PackageTags>
-    <PackageReleaseNotes>Implementation of Date Picker, migration to .NET 6. The Time Picker is to follow</PackageReleaseNotes>
+    <PackageReleaseNotes>Implementation of Date Picker, migration to .NET 6. In this release, the TimePicker Widget is available</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Version>2.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

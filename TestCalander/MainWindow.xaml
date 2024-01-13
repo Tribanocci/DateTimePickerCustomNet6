@@ -7,14 +7,41 @@
         xmlns:library="clr-namespace:DateTimePickerCustomNet6;assembly=DateTimePickerCustomNet6"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
 
-        <library:DatePickerWidget Grid.Column="0"/>
-        <library:TimePickerWidget Grid.Column="1"/>
+        <Grid Grid.Row="0">
+            <library:PopupDateTimePicker/>
+        </Grid> 
+
+
+
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <library:DatePickerWidget Grid.Column="0"/>
+            <library:TimePickerWidget Grid.Column="1"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <TextBlock />
+        </Grid>
     </Grid>
+    
+    
+
+    
+    
+    
 </Window>

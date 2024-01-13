@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using DateTimePickerCustomNet6;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,9 +18,14 @@ namespace TestCalander
     /// </summary>
     public partial class MainWindow : Window
     {
+        public DateTime myDate = DatePickerWidget.ResultDate;
+        public TimeOnly myTime = TimePickerWidget.ResultTime;
         public MainWindow()
         {
+            
             InitializeComponent();
         }
+
+
     }
 }
