@@ -25,7 +25,7 @@ Extented documenetations and comments for easy modifications and styling. Approp
 3. The DatePicker, TimePicker and PopupWidget are independent components.
 4. The project solution has a WPF application connected to the library for testing the LibraryClass.
 
-![Image 1:if not available see github repo](docs\DateTimePicker.png)
+![Image 1:if not available see github repo](docs/DateTimePicker.png)
 
 **In this Update the Popup widget is intergrated as an indepented feature, so you can inlude the popup only with a single tag. See [Usage](#usage) for explaining the Popup functionality**
 
